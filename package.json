@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gruselhaus/kmeans.js/issues",
     "email": "nico@gruselhaus.com"
+  },
+  "dependencies": {
+    "p5": "^0.7.2"
   }
 }
