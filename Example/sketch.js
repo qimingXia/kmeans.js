@@ -1,4 +1,4 @@
-const kmean;
+let kmean;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
