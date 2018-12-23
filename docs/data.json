@@ -1,0 +1,524 @@
+{
+    "project": {},
+    "files": {
+        "Lib/kmeans.js": {
+            "name": "Lib/kmeans.js",
+            "modules": {
+                "\"Kmeans.js\"": 1
+            },
+            "classes": {
+                "Kmeans": 1,
+                "Node": 1,
+                "Spot": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "\"Kmeans.js\"": {
+            "name": "\"Kmeans.js\"",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Kmeans": 1,
+                "Node": 1,
+                "Spot": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "Lib/kmeans.js",
+            "line": 324,
+            "author": "Nico Finkernagel",
+            "copyright": "Nico Finkernagel 2018",
+            "license": "MIT",
+            "requires": [
+                "p5.js"
+            ],
+            "version": "0.0.1"
+        }
+    },
+    "classes": {
+        "Kmeans": {
+            "name": "Kmeans",
+            "shortname": "Kmeans",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "\"Kmeans.js\"",
+            "namespace": "",
+            "file": "Lib/kmeans.js",
+            "line": 10,
+            "beta": 1,
+            "is_constructor": 1,
+            "uses": [
+                "Spot",
+                "Node"
+            ]
+        },
+        "Node": {
+            "name": "Node",
+            "shortname": "Node",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "Kmeans"
+            ],
+            "module": "\"Kmeans.js\"",
+            "namespace": "",
+            "file": "Lib/kmeans.js",
+            "line": 193,
+            "beta": 1,
+            "is_constructor": 1
+        },
+        "Spot": {
+            "name": "Spot",
+            "shortname": "Spot",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "Kmeans"
+            ],
+            "module": "\"Kmeans.js\"",
+            "namespace": "",
+            "file": "Lib/kmeans.js",
+            "line": 324,
+            "beta": 1,
+            "is_constructor": 1
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "Lib/kmeans.js",
+            "line": 18,
+            "description": "Constructor",
+            "itemtype": "method",
+            "name": "constructor",
+            "params": [
+                {
+                    "name": "_numofclusters",
+                    "description": "",
+                    "type": "Array"
+                },
+                {
+                    "name": "_numofspots",
+                    "description": "",
+                    "type": "Array"
+                },
+                {
+                    "name": "_background",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ],
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 26,
+            "description": "Spots Array",
+            "itemtype": "property",
+            "name": "spots",
+            "type": "Array",
+            "default": "[]",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 34,
+            "description": "Nodes Array",
+            "itemtype": "property",
+            "name": "nodes",
+            "type": "Array",
+            "default": "[]",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 42,
+            "description": "Number of Clusters, Nodes to be generated",
+            "itemtype": "property",
+            "name": "numofclusters",
+            "type": "Integer",
+            "default": "0",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\"",
+            "subprops": [
+                {
+                    "name": "_numofclusters",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 51,
+            "description": "Number of Spots, Spots to be generated",
+            "itemtype": "property",
+            "name": "numofspots",
+            "type": "Integer",
+            "default": "0",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\"",
+            "subprops": [
+                {
+                    "name": "_numofspots",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 60,
+            "description": "If Value is true the Kmeans algorithm has finished",
+            "itemtype": "property",
+            "name": "finished",
+            "type": "Boolean",
+            "default": "false",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 69,
+            "description": "Background color as a gray scale value",
+            "type": "Integer",
+            "params": [
+                {
+                    "name": "_background",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ],
+            "default": "255",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 79,
+            "itemtype": "method",
+            "name": "init",
+            "description": "This function initializes the Kmeans object. It generates the nodes & spots.",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 93,
+            "itemtype": "method",
+            "name": "addNode",
+            "description": "If this function is called it generates a new Node with random positions",
+            "callback": "show",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 112,
+            "itemtype": "method",
+            "name": "addSpots",
+            "description": "If this function is called new Spots will be generated",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-position for the new Spot",
+                    "type": "Float"
+                },
+                {
+                    "name": "y",
+                    "description": "y-position for the new Spot",
+                    "type": "Float"
+                },
+                {
+                    "name": "n",
+                    "description": "Optional: If this value is set, multiple Spots will generated with a random offset of the params x & y",
+                    "type": "Integer"
+                }
+            ],
+            "callback": "update",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 137,
+            "itemtype": "method",
+            "name": "update",
+            "description": "\"Task Manager\" for the Algoritm. The algoritm only runs if the Variable 'finished' is false",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 173,
+            "itemtype": "method",
+            "name": "show",
+            "description": "This function calls the show functions of the childs",
+            "class": "Kmeans",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 199,
+            "description": "Constructor",
+            "itemtype": "method",
+            "name": "constructor",
+            "params": [
+                {
+                    "name": "_r",
+                    "description": "R-Value for Color",
+                    "type": "Integer"
+                },
+                {
+                    "name": "_g",
+                    "description": "G-Value for Color",
+                    "type": "Integer"
+                },
+                {
+                    "name": "_b",
+                    "description": "B-Value for Color",
+                    "type": "Integer"
+                },
+                {
+                    "name": "_kmeans",
+                    "description": "Kmeans Parent",
+                    "type": "Kmeans"
+                }
+            ],
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 208,
+            "description": "X Position",
+            "itemtype": "property",
+            "name": "x",
+            "type": "Float",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 215,
+            "description": "Y Position",
+            "itemtype": "property",
+            "name": "y",
+            "type": "Float",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 222,
+            "description": "R - Value for Color",
+            "itemtype": "property",
+            "name": "r",
+            "type": "Integer",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 229,
+            "description": "G - Value for Color",
+            "itemtype": "property",
+            "name": "g",
+            "type": "Integer",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 236,
+            "description": "B - Value for Color",
+            "itemtype": "property",
+            "name": "b",
+            "type": "Integer",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 243,
+            "description": "Radius for rendering",
+            "itemtype": "property",
+            "name": "w",
+            "type": "Integer",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 250,
+            "description": "Array that holds the Spots",
+            "itemtype": "property",
+            "name": "spots",
+            "type": "Array",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 257,
+            "description": "Reference to the parent Kmeans Object",
+            "itemtype": "property",
+            "name": "kmean",
+            "type": "Kmeans",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 265,
+            "itemtype": "method",
+            "name": "show",
+            "description": "Renders the Object with p5.js Methods",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 286,
+            "itemtype": "method",
+            "name": "update",
+            "description": "Main Kmeans Algoritm.",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 315,
+            "itemtype": "method",
+            "name": "clearSpots",
+            "description": "Clears the spots Array",
+            "class": "Node",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 330,
+            "description": "Constructor",
+            "itemtype": "method",
+            "name": "constructor",
+            "params": [
+                {
+                    "name": "_x",
+                    "description": "X Position",
+                    "type": "Float"
+                },
+                {
+                    "name": "_y",
+                    "description": "Y Position",
+                    "type": "Float"
+                }
+            ],
+            "class": "Spot",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 337,
+            "description": "X Position",
+            "itemtype": "property",
+            "name": "x",
+            "type": "Float",
+            "class": "Spot",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 344,
+            "description": "Y Position",
+            "itemtype": "property",
+            "name": "y",
+            "type": "Float",
+            "class": "Spot",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 351,
+            "description": "Radius of the Object",
+            "itemtype": "property",
+            "name": "r",
+            "type": "Integer",
+            "default": "{Integer} 10",
+            "class": "Spot",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 359,
+            "description": "Refence to the Node Object",
+            "itemtype": "property",
+            "name": "node",
+            "type": "Node",
+            "default": "Null",
+            "class": "Spot",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 368,
+            "itemtype": "method",
+            "name": "findNearest",
+            "description": "Searches for the nearest Node and generate relations",
+            "class": "Spot",
+            "module": "\"Kmeans.js\""
+        },
+        {
+            "file": "Lib/kmeans.js",
+            "line": 393,
+            "itemtype": "method",
+            "name": "show",
+            "description": "Renders the Object with p5.js Methods",
+            "class": "Spot",
+            "module": "\"Kmeans.js\""
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: copyright",
+            "line": " Lib/kmeans.js:1"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " Lib/kmeans.js:1"
+        },
+        {
+            "message": "unknown tag: version",
+            "line": " Lib/kmeans.js:1"
+        },
+        {
+            "message": "unknown tag: callback",
+            "line": " Lib/kmeans.js:93"
+        },
+        {
+            "message": "unknown tag: callback",
+            "line": " Lib/kmeans.js:93"
+        },
+        {
+            "message": "unknown tag: callback",
+            "line": " Lib/kmeans.js:112"
+        },
+        {
+            "message": "Missing item type\nBackground color as a gray scale value",
+            "line": " Lib/kmeans.js:69"
+        }
+    ]
+}
