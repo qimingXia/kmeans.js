@@ -5,6 +5,9 @@
 
 ## Requirements
   * p5.js (0.7.2 or higher)
+  
+## API Reference
+[Click Here](https://gruselhaus.github.io/kmeans.js/docs/)
 
 ## Example
 ```js
