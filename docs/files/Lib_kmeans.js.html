@@ -93,20 +93,15 @@
  */
 
 /**
- * @beta
  * @class Kmeans
- * @constructor
  * @uses Spot
  * @uses Node
+ * @constructor
+ * @param {Array} _numofclusters
+ * @param {Array} _numofspots
+ * @param {Integer} _background
  */
 class Kmeans {
-  /**
-   * Constructor
-   * @method constructor
-   * @param {Array} _numofclusters
-   * @param {Array} _numofspots
-   * @param {Integer} _background
-   */
   constructor(_numofclusters, _numofspots, _background) {
     /**
      * Spots Array
@@ -276,19 +271,14 @@ class Kmeans {
 }
 
 /**
- * @beta
  * @class Node
  * @constructor
+ * @param {Integer} _r R-Value for Color
+ * @param {Integer} _g G-Value for Color
+ * @param {Integer} _b B-Value for Color
+ * @param {Kmeans} _kmeans Kmeans Parent
  */
 class Node {
-  /**
-   * Constructor
-   * @method constructor
-   * @param {Integer} _r R-Value for Color
-   * @param {Integer} _g G-Value for Color
-   * @param {Integer} _b B-Value for Color
-   * @param {Kmeans} _kmeans Kmeans Parent
-   */
   constructor(_r, _g, _b, _kmean) {
     /**
      * X Position
@@ -407,17 +397,12 @@ class Node {
 }
 
 /**
- * @beta
  * @class Spot
  * @constructor
+ * @param {Float} _x X Position
+ * @param {Float} _y Y Position
  */
 class Spot {
-  /**
-   * Constructor
-   * @method constructor
-   * @param {Float} _x X Position
-   * @param {Float} _y Y Position
-   */
   constructor(_x, _y) {
     /**
      * X Position
